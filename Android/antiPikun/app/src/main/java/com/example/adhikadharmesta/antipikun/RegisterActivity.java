@@ -1,5 +1,6 @@
 package com.example.adhikadharmesta.antipikun;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -51,6 +52,9 @@ public class RegisterActivity extends AppCompatActivity {
                            public void onResponse(Call<User> call, Response<User> response) {
                                if (response.isSuccessful()){
                                    Toast.makeText(RegisterActivity.this,"Sukses",Toast.LENGTH_LONG).show();
+                                   Intent tampilanLogin = new Intent(getApplicationContext(),LoginActivity.class);
+                                   startActivity(tampilanLogin);
+
                                }
                                else {
                                    Toast.makeText(RegisterActivity.this,"Gagal nyet",Toast.LENGTH_LONG).show();

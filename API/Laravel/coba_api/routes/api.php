@@ -15,6 +15,11 @@ use Illuminate\Http\Request;
 
 Route::post('login', 'API\UserController@login');
 Route::post('register', 'API\UserController@register');
+Route::post('create_task', 'API\TbTasksController@store');
+Route::get('see_task/{id}', 'API\TbTasksController@show');
+Route::post('update_task/{id_task}', 'API\TbTasksController@update');
+Route::delete('delete_task/{id_task}', 'API\TbTasksController@destroy');
+
 
 Route::group(['middleware' => 'auth:api'], function(){
 Route::post('details', 'API\UserController@details');

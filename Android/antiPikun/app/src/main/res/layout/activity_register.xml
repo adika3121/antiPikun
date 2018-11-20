@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,48 +8,116 @@
     tools:context=".RegisterActivity">
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <EditText
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_gradient"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/Nama"
-        android:inputType="text"
-        android:hint="Nama"
-        android:paddingBottom="10dp"/>
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="#FFF"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:padding="20dp"
+        android:id="@+id/layout_inputan_regis">
 
-    <EditText
-        android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Nama"
+            android:inputType="text"
+            android:hint="Masukan Nama Anda"
+            android:drawablePadding="20dp"
+            android:drawableRight="@drawable/ic_person"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/email"
+            android:inputType="textEmailAddress"
+            android:hint="Masukan Email Anda"
+            android:drawablePadding="20dp"
+            android:drawableRight="@drawable/ic_email"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password"
+            android:inputType="textPassword"
+            android:hint="*********"
+            android:drawablePadding="20dp"
+            android:drawableRight="@drawable/ic_password"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm Password"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/c_password"
+            android:inputType="textPassword"
+            android:hint="*********"
+            android:drawablePadding="20dp"
+            android:drawableRight="@drawable/ic_password"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/btn_register"
+            android:text="Register"
+            android:textColor="#FFFF"
+            android:background="@drawable/rec_gradient"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/email"
-        android:inputType="textEmailAddress"
-        android:hint="Email"
-        android:paddingBottom="10dp"/>
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/layout_inputan_regis"
+        android:text="Register"
+        android:textColor="#FFF"
+        android:layout_marginBottom="20dp"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/password"
-        android:inputType="textPassword"
-        android:hint="Password"
-        android:paddingBottom="10dp"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/c_password"
-        android:inputType="textPassword"
-        android:hint="Confirm Password"
-        android:paddingBottom="10dp"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="30dp"
-        android:id="@+id/btn_register"
-        android:hint="Register"/>
-
-
-
-</LinearLayout>
+</RelativeLayout>

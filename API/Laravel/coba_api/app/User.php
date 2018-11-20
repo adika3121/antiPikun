@@ -28,4 +28,10 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    protected $primaryKey = 'id';
+
+    public function tb_tasks(){
+      return $this->hashMany('App\tb_tasks');
+    }
 }
