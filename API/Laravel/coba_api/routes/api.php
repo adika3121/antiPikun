@@ -15,6 +15,7 @@ use Illuminate\Http\Request;
 
 Route::post('login', 'API\UserController@login');
 Route::post('register', 'API\UserController@register');
+Route::post('update/{id}', 'API\UserController@update');
 Route::post('create_task', 'API\TbTasksController@store');
 Route::get('see_task/{id}', 'API\TbTasksController@show');
 Route::post('update_task/{id_task}', 'API\TbTasksController@update');

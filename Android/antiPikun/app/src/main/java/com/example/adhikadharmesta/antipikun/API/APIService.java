@@ -6,6 +6,7 @@ import com.example.adhikadharmesta.antipikun.model.TaskDelete;
 import com.example.adhikadharmesta.antipikun.model.TaskUpdate;
 import com.example.adhikadharmesta.antipikun.model.User;
 import com.example.adhikadharmesta.antipikun.model.UserLogin;
+import com.example.adhikadharmesta.antipikun.model.UserUpdate;
 
 import retrofit2.Call;
 import retrofit2.http.DELETE;
@@ -62,6 +63,11 @@ public interface APIService {
 
     @DELETE("delete_task/{id_task}")
     Call<TaskDelete> deleteDataTask(@Path("id_task") int id_task);
+
+    @FormUrlEncoded
+    @POST("update/{id}")
+    Call<UserUpdate> updateDataUser(@Path("id") int id,
+                                    @Field("name") String name);
 
 
 

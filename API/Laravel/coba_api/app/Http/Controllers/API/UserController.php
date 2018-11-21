@@ -56,4 +56,17 @@ class UserController extends Controller {
               $user = Auth::user();
               return response()->json(['success' => $user], $this-> successStatus);
           }
+
+          public function update(Request $request, $id){
+              $validator = Validator::make($request->all(),[
+                'name' =>'required'
+              ]);
+
+              $user = User::where('id', '=', $id)->first();
+              $user->name = $request->name;
+
+              $user->save();
+
+              return response()->json(['updateUser'=>$user]);
+          }
 }
