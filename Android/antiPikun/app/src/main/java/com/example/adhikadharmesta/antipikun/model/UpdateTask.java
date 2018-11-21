@@ -1,9 +1,9 @@
 package com.example.adhikadharmesta.antipikun.model;
 
-import javax.annotation.Generated;
+
 import com.google.gson.annotations.SerializedName;
 
-@Generated("com.robohorse.robopojogenerator")
+
 public class UpdateTask{
 
 	@SerializedName("updated_at")

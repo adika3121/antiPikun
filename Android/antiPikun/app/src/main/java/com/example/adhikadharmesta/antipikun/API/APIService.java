@@ -49,7 +49,8 @@ public interface APIService {
 
     @FormUrlEncoded
     @POST("update_task/{id_task}")
-    Call<TaskUpdate> updateDataTask(@Field("nama_task") String nama_task,
+    Call<TaskUpdate> updateDataTask(@Path("id_task") int id_task,
+                                    @Field("nama_task") String nama_task,
                                     @Field("deskripsi") String deskripsi,
                                     @Field("tanggal_deadline") String tanggal_deadline,
                                     @Field("waktu_deadline") int waktu_deadline,
@@ -60,7 +61,7 @@ public interface APIService {
     );
 
     @DELETE("delete_task/{id_task}")
-    Call<TaskDelete> deleteDataTask(@Path())
+    Call<TaskDelete> deleteDataTask(@Path("id_task") int id_task);
 
 
 

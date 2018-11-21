@@ -21,7 +21,8 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".AddRemainderActivity"></activity>
+        <activity android:name=".AddRemainderActivity" />
+        <activity android:name=".ListTaskActivity"></activity>
     </application>
 
 </manifest>
